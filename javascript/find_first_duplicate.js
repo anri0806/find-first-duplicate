@@ -1,5 +1,11 @@
 function findFirstDuplicate(arr) {
   // type your code here
+
+  // find the item that doesn't match index number
+
+  /// FIND A WAY TO RETURN -1 IF all the index matches
+  // (none of index doesnt match)
+  return arr.find((item, index) => arr.indexOf(item) !== index);
 }
 
 if (require.main === module) {
@@ -16,4 +22,10 @@ if (require.main === module) {
 module.exports = findFirstDuplicate;
 
 // Please add your pseudocode to this file
+
+// I want to return first duplicate value in array
+
+// First, array.find => if arr is not unique by comparing each value's index
+// Then, return that value
+
 // And a written explanation of your solution
