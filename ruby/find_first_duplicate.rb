@@ -1,5 +1,15 @@
 def find_first_duplicate(arr)
   # type your code in here
+
+  newArr = []
+
+  arr.each do |e|
+    return e if newArr[e] ## <- e is index number
+    newArr[e] = true
+  end
+
+  -1
+
 end
 
 if __FILE__ == $PROGRAM_NAME
@@ -15,4 +25,9 @@ if __FILE__ == $PROGRAM_NAME
 end
 
 # Please add your pseudocode to this file
+
+## Create variable = -1
+## I want to iterate number i and j and find matching
+
+
 # And a written explanation of your solution
