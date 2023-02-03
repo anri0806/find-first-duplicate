@@ -1,17 +1,32 @@
 function findFirstDuplicate(arr) {
   // type your code here
 
-  let newArr = -1;
 
-  for (let i = 0; i < arr.length - 1; i++) {
-    for (let j = i + 1; j < arr.length; j++) {
-      if (arr[i] === arr[j]) {
-        newArr = arr[i]
-      }  
-    }
-  }
 
-  return newArr
+  //// Using for loop ///
+
+  // let newArr = -1;
+  // arr.find((item, index) =>
+  //   arr.indexOf(item) !== index ? (newArr = item) : null
+  // );
+
+  // return newArr
+
+
+  
+  //// Using for loop ///
+
+  // let newArr = -1;
+
+  // for (let i = 0; i < arr.length - 1; i++) {
+  //   for (let j = i + 1; j < arr.length; j++) {
+  //     if (arr[i] === arr[j]) {
+  //       newArr = arr[i]
+  //     }
+  //   }
+  // }
+
+  // return newArr
 }
 
 if (require.main === module) {
@@ -37,9 +52,3 @@ module.exports = findFirstDuplicate;
 
 // First, array.find => if arr is not unique by comparing each value's index
 // Then, return that value
-
-// find the item that doesn't match index number
-
-/// FIND A WAY TO RETURN -1 IF all the index matches
-// (none of index doesnt match)
-// return arr.find((item, index) => arr.indexOf(item) !== index);
