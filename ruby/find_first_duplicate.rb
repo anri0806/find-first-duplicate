@@ -1,15 +1,25 @@
+require 'set'
+
 def find_first_duplicate(arr)
   # type your code in here
 
-  newArr = []
+  #### SECOND ATTEMPT
+  #### Create empty set -->  #<Set: {}>  will look like this after addition
+  ####  #<Set: {1, 3, 4} >
+  #### Then iterate each value 
+  #### Return if set includes iterated value, if not, add value to set
 
-  arr.each do |e|
-    return e if newArr[e] ## <- e is index number
-    newArr[e] = true
+  uniques = Set.new
+
+  arr.each do |value|
+    if uniques.include?(value)
+     return value 
+    else
+     uniques.add(value)
+    end
   end
 
   -1
-
 end
 
 if __FILE__ == $PROGRAM_NAME
@@ -26,8 +36,17 @@ end
 
 # Please add your pseudocode to this file
 
+
+#### FIRST ATTEMPT
+
 ## Create variable = -1
 ## I want to iterate number i and j and find matching
 
+  # newArr = []
 
-# And a written explanation of your solution
+  # arr.each do |e|
+  #   return e if newArr[e] ## <- e is index number
+  #   newArr[e] = true
+  # end
+
+  # -1
