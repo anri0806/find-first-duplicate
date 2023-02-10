@@ -1,13 +1,17 @@
 function findFirstDuplicate(arr) {
   // type your code here
 
-  newArr = -1;
+  let newArr = -1
 
-  arr.find((currentValue, currentIndex) =>
-    arr.indexOf(currentValue) !== currentIndex ? (newArr = currentValue) : null
-  );
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = i + 1; j < arr.length - 1; j++) {
+      if (arr[i] === arr[j]) {
+        newArr = arr[i]
+      }
+    }
+  }
 
-  return newArr;
+  return newArr
 }
 
 if (require.main === module) {
@@ -25,10 +29,22 @@ module.exports = findFirstDuplicate;
 
 // Please add your pseudocode to this file
 
-//// FIRST ATTEMPT
-//// I want to iterate each number
-//// Then, compare iterated number with variable =[]
-//// If not, add to []
+//// Create variable = -1
+//// Iterate i (starts from index 0) and j (index 1)
+//// If matched, var = i
+
+
+// THIRD ATTEMPT
+
+// newArr = -1;
+
+// arr.find((currentValue, currentIndex) =>
+//   arr.indexOf(currentValue) !== currentIndex ? (newArr = currentValue) : null
+// );
+
+// return newArr;
+
+
 
 //// SECOND ATTEMPT
 // I want to return first duplicate value in array
@@ -57,3 +73,8 @@ module.exports = findFirstDuplicate;
 // }
 
 // return newArr
+
+//// FIRST ATTEMPT
+//// I want to iterate each number
+//// Then, compare iterated number with variable =[]
+//// If not, add to []
