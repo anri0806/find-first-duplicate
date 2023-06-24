@@ -6,6 +6,7 @@ def find_first_duplicate(arr)
   newArr = Set.new
   i = 0
 
+  puts "test"
 
   arr.each do |value|
     if newArr.include?(value) 
